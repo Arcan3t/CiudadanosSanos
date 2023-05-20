@@ -5,6 +5,9 @@ namespace Ciudadanos_Sanos.Data
 {
     public class CSContext : DbContext
     {
+        public CSContext(DbContextOptions options) : base(options) 
+        {
+        }
         public DbSet<Patient> Patients { get; set; }
         public DbSet<Doctor> Doctors { get; set; }
 

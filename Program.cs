@@ -1,7 +1,15 @@
+using Ciudadanos_Sanos.Data;
+using Ciudadanos_Sanos.Model;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+
+builder.Services.AddDbContext<CSContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("CSDB"))
+);
 
 builder.Services.AddAuthentication().AddCookie("MyCookieAuth", options =>
 {
