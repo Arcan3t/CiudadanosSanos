@@ -10,7 +10,7 @@ namespace Ciudadanos_Sanos.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=()localdb\\mssqllocaldb;Database=CiudadanosSanos;Trusted_Connection=True;");
+            optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=CiudadanosSanos;Trusted_Connection=True;");
         }
     }
 }
