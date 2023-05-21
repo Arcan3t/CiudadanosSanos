@@ -1,10 +1,12 @@
 using Ciudadanos_Sanos.Data;
 using Ciudadanos_Sanos.Model;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Ciudadanos_Sanos.Pages.Doctors
 {
+    [Authorize]
     public class CreateModel : PageModel
     {
         private readonly CSContext _context;
