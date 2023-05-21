@@ -1,11 +1,13 @@
 using Ciudadanos_Sanos.Data;
 using Ciudadanos_Sanos.Model;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 
 namespace Ciudadanos_Sanos.Pages.Patients
 {
+    [Authorize]
     public class EditModel : PageModel
     {
         private readonly CSContext _context;
